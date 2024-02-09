@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul class="listaAnimes">
+
+  </ul>
+
+</body>
+  <script>
+// inserindo elementos html a partir do javascript
+
+    var elemento = document.createElement("div");//cria uma div e adiciona a uma variavel
+    elemento.innerHTML = "<h1>Lista de Animes</h1>";//cria a tag h1 dentro da div
+    elemento.style.color = "#ff00ff";//muda a cor da fonte para rosa
+    document.body.append(elemento);//insere dentro do body no html
+
+// criando uma lista a partir do javascript
+
+    animes = ["one piece", "naruto", "fullmetal", "frieren"]//array de itens para listar
+    
+    var listaDeAnimes = document.querySelector('ul.listaAnimes');//busca no html onde vai mostrar
+
+    for(var i = 0; i < animes.length; i++) {//cria um laço para iterar sobre os elementos do array
+      var anime = animes[i];//vai armazenando um item por vez
+      var listAnime = document.createElement('li');//cria a lista
+      listAnime.innerText = anime;//armazena o item
+      listAnime.style.border = '1px solid blue'//coloca o estilo da lista
+      listaDeAnimes.appendChild(listAnime);//manda mostrar os itens na tela
+    }
+  </script>
+</html>

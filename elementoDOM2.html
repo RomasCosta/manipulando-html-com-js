@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="confirmar()">Excluir Item</button>
+</body>
+<script>
+  function confirmar() {
+    let confirmacao = window.confirm("Você deseja excluir o item?");
+    if(confirmacao){
+      window.alert("Você vai excluir o item")
+    }else{
+      window.alert("Você cancelou a operação")
+    }
+  }
+</script>
+</html>
